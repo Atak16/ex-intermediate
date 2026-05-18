@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.Domain.Central;
 import com.example.Service.CentralService;
 
+/**
+ * 球団情報を管理するコントローラークラスです。
+ * 球団の一覧表示や詳細表示の処理を行います。
+ * 
+ * @Author Akihide Takahashi
+ */
 @Controller
 @RequestMapping("/central")
 public class CentralController {
@@ -29,6 +35,9 @@ public class CentralController {
     @GetMapping("/detail/{id}")
     public String detail(@PathVariable Integer id, Model model) {
         Central central = service.load(id);
+        if (central == null) {
+            return "error/notFound";
+        }
         model.addAttribute("central", central);
         return "detail";
     }

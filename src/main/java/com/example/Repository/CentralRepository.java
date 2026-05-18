@@ -39,8 +39,8 @@ public class CentralRepository {
     public Central load(Integer id) {
         String sql = "SELECT id, league_name, team_name, headquarters, inauguration, history FROM teams WHERE id = :id";
         SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
-        Central central = template.queryForObject(sql, param, CENTRAL_ROW_MAPPER);
-        return central;
+        List<Central> list = template.query(sql, param, CENTRAL_ROW_MAPPER);
+        return list.isEmpty() ? null : list.get(0);
     }
 
     /**
