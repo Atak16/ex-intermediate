@@ -25,6 +25,10 @@ public class CentralController {
     @Autowired
     private CentralService service;
 
+    /**
+     * 球団情報の一覧を表示します。
+     * @param model
+     */
     @GetMapping("")
     public String index(Model model) {
         List<Central> list = service.findAll();
@@ -32,6 +36,11 @@ public class CentralController {
         return "team";
     }
 
+    /**
+     * 球団情報の詳細を表示します。
+     * @param id
+     * @param model
+     */
     @GetMapping("/detail/{id}")
     public String detail(@PathVariable Integer id, Model model) {
         Central central = service.load(id);

@@ -20,7 +20,6 @@ public class CentralRepository {
 
     @Autowired
     private NamedParameterJdbcTemplate template;
-
     private static final RowMapper<Central> CENTRAL_ROW_MAPPER = (rs, i) -> {
         Central central = new Central();
         central.setId(rs.getInt("id"));
