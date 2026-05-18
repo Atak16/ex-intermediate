@@ -1,4 +1,4 @@
-package com.example.Controller;
+package com.example.controller;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.Domain.Central;
-import com.example.Service.CentralService;
+import com.example.domain.Central;
+import com.example.service.CentralService;
 
 /**
  * 球団情報を管理するコントローラークラスです。
  * 球団の一覧表示や詳細表示の処理を行います。
  * 
- * @Author Akihide Takahashi
+ * @author Akihide Takahashi
  */
 @Controller
 @RequestMapping("/central")

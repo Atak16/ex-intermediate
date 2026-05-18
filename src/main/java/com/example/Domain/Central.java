@@ -1,4 +1,4 @@
-package com.example.Domain;
+package com.example.domain;
 
 /**
  * DBと接続するDomainクラス

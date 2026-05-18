@@ -1,4 +1,4 @@
-package com.example.Service;
+package com.example.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.Domain.Central;
-import com.example.Repository.CentralRepository;
+import com.example.domain.Central;
+import com.example.repository.CentralRepository;
 
 /**
  * 処理の流れを記述するServiceクラス
